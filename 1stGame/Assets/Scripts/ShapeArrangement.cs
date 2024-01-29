@@ -7,14 +7,17 @@ using UnityEngine.UI;
 
 public class ShapeArrangement : MonoBehaviour 
 {
-    [SerializeField] GameObject[] scrambledShapeIDs = new GameObject[4];
-    
+    [SerializeField] GameObject[] scrambledShapes = new GameObject[4];
+    [SerializeField] Transform[] shapePositions = new Transform[4];
+    Vector3 shapepositionActual;
+
     private void Start()
     {
-        GenerateRandomArray(scrambledShapeIDs);
-        for (int i = 0; i < scrambledShapeIDs.Length; i++)
+        GenerateRandomArray(scrambledShapes);
+        for (int i = 0; i < scrambledShapes.Length; i++)
         {
-            Console.WriteLine(scrambledShapeIDs[i]);
+            Vector3 shapepositionActual = shapePositions[i].position;
+            Instantiate(scrambledShapes[i], shapepositionActual, Quaternion.identity);
         }
     }
 
