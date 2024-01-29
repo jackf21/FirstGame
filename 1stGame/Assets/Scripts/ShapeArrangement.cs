@@ -8,15 +8,15 @@ public class ShapeArrangement : MonoBehaviour
 {
     [SerializeField] int[] scrambledShapeIDs = new int[4];
 
-    public void Update()
+    public void Start()
     {
-        foreach (int i in scrambledShapeIDs)
+        for(int i = 0; i < scrambledShapeIDs.Length; i++)
         {
             scrambledShapeIDs[i] = i + 1;
         }
 
         GenerateRandomArray(scrambledShapeIDs);
-        foreach (int i in scrambledShapeIDs)
+        for (int i = 0; i < scrambledShapeIDs.Length; i++)
         {
             Console.WriteLine(scrambledShapeIDs[i]);
         }
