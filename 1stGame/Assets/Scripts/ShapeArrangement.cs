@@ -3,12 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShapeArrangement : MonoBehaviour 
 {
     [SerializeField] int[] scrambledShapeIDs = new int[4];
-
-    public void Start()
+    
+    [SerializeField] GameObject _circle;
+    //[SerializeField] GameObject _square;
+    //[SerializeField] GameObject _triangle;
+    //[SerializeField] GameObject _pentagon;
+    
+    private void Start()
     {
         for(int i = 0; i < scrambledShapeIDs.Length; i++)
         {
@@ -20,6 +26,8 @@ public class ShapeArrangement : MonoBehaviour
         {
             Console.WriteLine(scrambledShapeIDs[i]);
         }
+        Instantiate(_circle, new Vector3(0f, 0f, 0f), Quaternion.identity);
+
     }
 
     public int[] GenerateRandomArray(int[] arrayToShuffle)
