@@ -6,13 +6,13 @@ using UnityEngine;
 
 public class ShapeArrangement : MonoBehaviour 
 {
-    int[] scrambledShapeIDs = new int[4];
+    [SerializeField] int[] scrambledShapeIDs = new int[4];
 
-    private void Start()
+    public void Update()
     {
         foreach (int i in scrambledShapeIDs)
         {
-            scrambledShapeIDs[i] = i;
+            scrambledShapeIDs[i] = i + 1;
         }
 
         GenerateRandomArray(scrambledShapeIDs);
