@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] Slider timer;
     [SerializeField] float sliderTime;
-    [SerializeField] float increasingTime;
+    float increasingTime;
 
     private void Update()
     {
