@@ -18,7 +18,7 @@ public class ShapeArrangement : MonoBehaviour
         }
     }
 
-    public GameObject[] GenerateRandomArray(GameObject[] arrayToShuffle)
+    private GameObject[] GenerateRandomArray(GameObject[] arrayToShuffle)
     {
         for (int i = arrayToShuffle.Length - 1; i >= 0; i--)
         {
