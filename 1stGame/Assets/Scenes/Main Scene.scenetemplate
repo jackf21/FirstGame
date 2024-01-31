@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13966, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: Main Scene
+  m_EditorClassIdentifier: 
+  templateScene: {fileID: 102900000, guid: 0f254eb8cf16e497bb6dca114f88bfa6, type: 3}
+  templateName: Puzzle Base
+  description: 
+  preview: {fileID: 0}
+  dependencies:
+  - dependency: {fileID: 2800000, guid: 59d460eaca04e4a1f8639b95565f8dc7, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: e080d9e6e16b9477ca02c7ef6d496a03, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 4492402479827350954, guid: 19557235e5d8f422b944b5bf4fd9c296, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: ee148e281f3c41c5b4ff5f8a5afe5a6c, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 5729810611448379782, guid: 1fb8ef49b8a0349af9659cb5c62fc6c6, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 2fd6421f253b4ef1a19526541f9ffc0c, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 3435670895006841276, guid: 8adf1dcfeb9b644eeba1e4a878a0bec0, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+    instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 3456771572519561021, guid: a3db23659dfb14500b1a3d354a09ccc2, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    instantiationMode: 1
+  - dependency: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+    instantiationMode: 1
+  templatePipeline: {fileID: 0}
+  badge: {fileID: 0}
+  addToDefaults: 0

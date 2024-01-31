@@ -2,26 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class CorrectNumberGeneration : MonoBehaviour
 {
-    [Header("GameObjects")]
+    [Header("In Scene")]
     [SerializeField] GameObject initialPanel;
     [SerializeField] GameObject finalPanel;
-    [SerializeField] GameObject correctButton;
+    [SerializeField] TMP_Text numberText;
 
-    [Header("ShapePositions")]
-    int initialPanelPosition;
-    int finalPanelPosition;
+    [Header("New Arrays")]
+    GameObject[] initialPanelNew = new GameObject[4];
+    GameObject[] finalPanelNew = new GameObject[4];
 
     int[] textPositions = new int[4];
 
-    //Number to display = shape position in final pannel array
-    //Position of number (in textPositions) = shape position in initial pannel array
+    void Update()
+    {
+        for(int i = 0; i < initialPanelNew.Length; i++)
+        {
+            initialPanelNew[i] = initialPanel.GetComponent<ShapeArrangement>().scrambledShapes[i];
+        }
 
-    //For each element in initial pannel array find the matching one in final pannel array
-    //If type of gameobject matches, the position of the compared element (+1) is saved in the textPositions array at the associated position
-    //Use == (maybe compare tag if desparate)
+        for(int i = 0; i < finalPanelNew.Length; i++)
+        {
+            finalPanelNew[i] = finalPanel.GetComponent<ShapeArrangement>().scrambledShapes[i];
+        }
 
-    //Update text field after with (texPositions[0] + " " +  texPositions[1] etc)
+        for (int i = 0; i < initialPanelNew.Length; i++)
+        {
+            for(int j = 0;j < finalPanelNew.Length; j++)
+            {
+                if (initialPanelNew[i].tag == finalPanelNew[j].tag)
+                {
+                    textPositions[i] = j + 1;
+                }
+            }
+        }
+
+        numberText.text = (textPositions[0] + " " + textPositions[1] + " " + textPositions[2] + " " + textPositions[3]);
+    }
 }

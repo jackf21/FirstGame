@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class ShapeArrangement : MonoBehaviour 
 {
-    [SerializeField] GameObject[] scrambledShapes = new GameObject[4];
+    public GameObject[] scrambledShapes = new GameObject[4];
     [SerializeField] Transform[] shapePositions = new Transform[4];
     Vector3 shapepositionActual;
 
