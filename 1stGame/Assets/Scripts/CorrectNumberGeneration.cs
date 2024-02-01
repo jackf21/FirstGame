@@ -17,6 +17,12 @@ public class CorrectNumberGeneration : MonoBehaviour
 
     int[] textPositions = new int[4];
 
+    private void Start()
+    {
+        initialPanel = GameObject.Find("Initial Panel");
+        finalPanel = GameObject.Find("Final Panel");
+    }
+
     void Update()
     {
         for(int i = 0; i < initialPanelNew.Length; i++)
