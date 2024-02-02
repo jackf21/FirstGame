@@ -25,6 +25,7 @@ public class CorrectNumberGeneration : MonoBehaviour
 
     void Update()
     {
+        //Loading arrays grabbed from scene into arrays in the script
         for(int i = 0; i < initialPanelNew.Length; i++)
         {
             initialPanelNew[i] = initialPanel.GetComponent<ShapeArrangement>().scrambledShapes[i];
@@ -35,13 +36,14 @@ public class CorrectNumberGeneration : MonoBehaviour
             finalPanelNew[i] = finalPanel.GetComponent<ShapeArrangement>().scrambledShapes[i];
         }
 
+        //Checking each shape in the initial pannel for its counterpart in the final pannel
         for (int i = 0; i < initialPanelNew.Length; i++)
         {
             for(int j = 0;j < finalPanelNew.Length; j++)
             {
                 if (initialPanelNew[i].tag == finalPanelNew[j].tag)
                 {
-                    textPositions[i] = j + 1;
+                    textPositions[i] = j + 1; //Saves the numerical position of the shape in the final array in the
                 }
             }
         }

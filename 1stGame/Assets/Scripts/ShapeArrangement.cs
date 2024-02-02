@@ -9,34 +9,21 @@ public class ShapeArrangement : MonoBehaviour
 {
     public GameObject[] scrambledShapes = new GameObject[4];
     [SerializeField] Transform[] shapePositions = new Transform[4];
+    [SerializeField] Transform parent;
+    GameObject newObject;
+
     Vector3 shapepositionActual;
+
+    Scramble scramble = new Scramble();
 
     private void Start()
     {
-        GenerateRandomArray(scrambledShapes);
+        scramble.GameObjectRandomArray(scrambledShapes);
         for (int i = 0; i < scrambledShapes.Length; i++)
         {
             Vector3 shapepositionActual = shapePositions[i].position;
-            Instantiate(scrambledShapes[i], shapepositionActual, Quaternion.identity);
+            newObject = Instantiate(scrambledShapes[i], shapepositionActual, Quaternion.identity);
+            newObject.transform.SetParent(parent);
         }
-    }
-
-    private GameObject[] GenerateRandomArray(GameObject[] arrayToShuffle)
-    {
-        for (int i = arrayToShuffle.Length - 1; i >= 0; i--)
-        {
-            var k = RandomNumberGen(i + 1);
-            var value = arrayToShuffle[k];
-            arrayToShuffle[k] = arrayToShuffle[i];
-            arrayToShuffle[i] = value;
-        }
-
-        return arrayToShuffle;
-    }
-
-    private int RandomNumberGen(int max)
-    {
-        int random = UnityEngine.Random.Range(0, max);
-        return random;
     }
 }
