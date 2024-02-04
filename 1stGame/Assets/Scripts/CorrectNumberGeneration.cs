@@ -36,7 +36,7 @@ public class CorrectNumberGeneration : MonoBehaviour
             finalPanelNew[i] = finalPanel.GetComponent<ShapeArrangement>().scrambledShapes[i];
         }
 
-        //Checking each shape in the initial pannel for its counterpart in the final pannel
+        //Checking each shape in the initial pannel for its counterpart in the final pannel using tags
         for (int i = 0; i < initialPanelNew.Length; i++)
         {
             for(int j = 0;j < finalPanelNew.Length; j++)

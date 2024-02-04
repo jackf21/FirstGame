@@ -1094,6 +1094,7 @@ MonoBehaviour:
   - {fileID: 478121878}
   - {fileID: 491533098}
   - {fileID: 706854742}
+  parent: {fileID: 1902692982}
 --- !u!212 &1902692981
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1218,6 +1219,7 @@ MonoBehaviour:
   - {fileID: 1553523561}
   - {fileID: 188706648}
   - {fileID: 1189192202}
+  parent: {fileID: 167736552}
 --- !u!114 &2029201638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1343,11 +1345,12 @@ MonoBehaviour:
   - {fileID: 1167519535}
   - {fileID: 1224200252}
   - {fileID: 1045015176}
+  parent: {fileID: 2089129928}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 724434128}
-  - {fileID: 278495883}
   - {fileID: 2089129928}
   - {fileID: 1902692982}
+  - {fileID: 278495883}
